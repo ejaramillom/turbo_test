@@ -1,14 +1,9 @@
-<% content_for :title, "Editing tweet" %>
-
-<h1>Editing tweet</h1>
-
 <%= turbo_frame_tag dom_id(@tweet) do %>
+  <% content_for :title, "Editing tweet" %>
+
+  <h3>Editing tweet</h3>
   <div>
     <%= render "tweets/form", tweet: @tweet %>
     <%= link_to 'Cancel', @tweet %>
-    <br>
-  </div>
-  <div>
-    <%= link_to "Back to tweets", tweets_path %>
   </div>
 <% end %>
