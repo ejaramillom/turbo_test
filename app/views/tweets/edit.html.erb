@@ -2,11 +2,13 @@
 
 <h1>Editing tweet</h1>
 
-<%= render "form", tweet: @tweet %>
-
-<br>
-
-<div>
-  <%= link_to "Show this tweet", @tweet %> |
-  <%= link_to "Back to tweets", tweets_path %>
-</div>
+<%= turbo_frame_tag dom_id(@tweet) do %>
+  <div>
+    <%= render "tweets/form", tweet: @tweet %>
+    <%= link_to 'Cancel', @tweet %>
+    <br>
+  </div>
+  <div>
+    <%= link_to "Back to tweets", tweets_path %>
+  </div>
+<% end %>
