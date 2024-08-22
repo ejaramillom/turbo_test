@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_08_20_191506) do
+ActiveRecord::Schema[7.2].define(version: 2024_08_22_152705) do
+  create_table "swapeople", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "person_id"
+    t.string "birth_year", default: ""
+    t.string "eye_color", default: ""
+    t.integer "height", default: 0
+    t.integer "mass", default: 0
+    t.string "name", default: ""
+    t.string "url", default: ""
+  end
+
   create_table "tweets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
