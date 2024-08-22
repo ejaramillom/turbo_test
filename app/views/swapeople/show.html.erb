@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @swaperson %>
+
+<div>
+  <%= link_to "Edit this swaperson", edit_swaperson_path(@swaperson) %> |
+  <%= link_to "Back to swapeople", swapeople_path %>
+
+  <%= button_to "Destroy this swaperson", @swaperson, method: :delete %>
+</div>

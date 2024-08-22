@@ -1,0 +1,2 @@
+class Swaperson < ApplicationRecord
+end
